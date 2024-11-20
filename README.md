@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Version Français
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Zombies Perks - Call of Duty: Black Ops Cold War
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Bienvenue sur le projet **Zombies Perks**, une application web interactive construite avec **React** permettant d'afficher une liste d'atouts (perks) du mode Zombies dans **Call of Duty: Black Ops Cold War**. L'application permet aux joueurs de découvrir et explorer les atouts du jeu de manière simple, intuitive et responsive.
 
-### `npm start`
+Chaque atout est présenté avec :
+- **Son nom**
+- **Une brève description**
+- **Une image représentative**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fonctionnalités principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✨ **Affichage des atouts** : Liste des atouts avec images et descriptions.  
+🌐 **Interface claire et responsive** : Conçue pour offrir une expérience utilisateur fluide sur tous les appareils (mobile, tablette, desktop).  
+📦 **Pas de backend** : Toutes les données sont stockées en local dans l'application, sans nécessité de serveur externe.
 
-### `npm test`
+## Technologies utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** : Framework JavaScript pour construire l'interface utilisateur.
+- **CSS** : Pour styliser l'application avec un design moderne et épuré.
+- **JavaScript (ES6+)** : Utilisation des fonctionnalités modernes d'ES6+ pour une gestion efficace du code.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prérequis
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js** : Assurez-vous d'avoir installé **Node.js** sur votre machine (version 12.x ou supérieure).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Étapes d'installation
 
-### `npm run eject`
+1. Clonez ce repository sur votre machine locale.
+   ```bash
+   git clone https://github.com/votre-utilisateur/zombies-perks.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# English Version
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Zombies Perks - Call of Duty: Black Ops Cold War
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Description
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Welcome to the **Zombies Perks** project, an interactive web application built with **React** that displays a list of perks from the **Zombies mode** in **Call of Duty: Black Ops Cold War**. The app allows players to discover and explore the game's perks in a simple, intuitive, and responsive way.
 
-## Learn More
+Each perk is presented with:
+- **Its name**
+- **A brief description**
+- **A representative image**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Key Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✨ **Perk Display**: A list of perks with images and descriptions.  
+🌐 **Clear and Responsive Interface**: Designed to offer a smooth user experience on all devices (mobile, tablet, desktop).  
+📦 **No Backend**: All data is stored locally in the app, no external server required.
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **React**: JavaScript framework to build the user interface.
+- **CSS**: To style the app with a modern and clean design.
+- **JavaScript (ES6+)**: Leveraging modern ES6+ features for efficient code management.
 
-### Analyzing the Bundle Size
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
 
-### Making a Progressive Web App
+- **Node.js**: Make sure **Node.js** is installed on your machine (version 12.x or higher).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Installation Steps
 
-### Advanced Configuration
+1. Clone this repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/zombies-perks.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Code
 
-### Deployment
+import React from 'react';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+const PerkList = () => {
+  const perks = [
+    {
+      id: 1,
+      name: 'Jugger-Nog',
+      description: 'Increases max health by 50%.',
+      image: '/images/jugger.jpeg'
+      },      
+    {
+      id: 2,
+      name: 'Speed Cola',
+      description: 'Increases reload speed by 50%.',
+      image: 'images/speed.jpeg'
+    },
