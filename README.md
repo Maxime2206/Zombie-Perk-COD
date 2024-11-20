@@ -94,3 +94,26 @@ const PerkList = () => {
     },
 
     // rajoutez autant d'atout que vous voulez (tant qu'ils existes bien sur) //
+
+    // et Finir par cette partie du code dans src/components/PerkList.js //
+
+    return (
+    <div>
+      <h2>Liste des Atout du Mode Zombie de Call Of Duty</h2>
+      <ul>
+        {perks.map((perk) => (
+          <li key={perk.id} style={{ marginBottom: '20px' }}>
+            <img
+              src={perk.image}
+              alt={perk.name}
+              style={{ width: '150px', height: '150px', marginRight: '10px' }}
+            />
+            <strong>{perk.name}</strong>: {perk.description}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default PerkList;
