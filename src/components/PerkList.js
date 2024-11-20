@@ -50,6 +50,12 @@ const PerkList = () => {
       description: 'Causes bullets to have random elemental effects.',
       image: 'images/pop.jpeg'
     },
+    {
+      id: 9,
+      name: 'PHD Flopper',
+      description: 'immune to self-dealt damage.',
+      image: 'images/PHD.jpeg'
+      },
   ];
 
   // Rajoutez d'autre atout ici pour les autres modes zombies //

@@ -1,51 +1,108 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* --- Global styles --- */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
   color: #007BFF;
+  font-size: 2.5em;
+  text-transform: uppercase;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: #444;
 }
 
+h1, h2 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Main container --- */
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  transition: transform 0.3s ease;
 }
 
+.App:hover {
+  transform: scale(1.01);
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* --- Perk list styles --- */
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  max-width: 800px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
+  transition: grid-template-columns 0.5s ease;
 }
 
+/* --- Perk list item --- */
 li {
   background-color: white;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 li img {
@@ -53,30 +110,184 @@ li img {
   height: 120px;
   border-radius: 8px;
   margin-bottom: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+li img:hover {
+  transform: scale(1.1);
 }
 
 strong {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #333;
   margin-bottom: 8px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
 }
 
 p {
   font-size: 1em;
   color: #555;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+/* --- Hover effects --- */
+li:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+li:hover strong {
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+/* --- Loading spinner --- */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #007BFF;
+  border-top: 5px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Card flip effect --- */
+.perk-card {
+  perspective: 1000px;
+}
+
+.perk-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.perk-card:hover .perk-card-inner {
+  transform: rotateY(180deg);
+}
+
+.perk-card-front, .perk-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perk-card-front {
+  background-color: #ffffff;
+}
+
+.perk-card-back {
+  background-color: #007BFF;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+/* --- Responsive design --- */
+@media (max-width: 1024px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  li {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 8px 16px;
   }
 }
 
 @media (max-width: 480px) {
-  ul {
-    grid-template-columns: 1fr;
+  h1 {
+    font-size: 1.8em;
   }
-  li {
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .App {
     padding: 10px;
   }
+
+  li {
+    width: 100%;
+    padding: 10px;
+  }
+
+  li img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* --- Dark mode support --- */
+body[data-theme="dark"] {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2 {
+  color: #ffa500;
+}
+
+body[data-theme="dark"] li {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+body[data-theme="dark"] li:hover {
+  background-color: #444;
+}
+
+body[data-theme="dark"] button {
+  background-color: #ffa500;
+}
+
+body[data-theme="dark"] button:hover {
+  background-color: #e68900;
 }

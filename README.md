@@ -92,3 +92,5 @@ const PerkList = () => {
       description: 'Increases reload speed by 50%.',
       image: 'images/speed.jpeg'
     },
+
+    // rajoutez autant d'atout que vous voulez (tant qu'ils existes bien sur) //
