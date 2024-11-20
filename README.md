@@ -4,7 +4,7 @@
 
 ## Description
 
-Bienvenue sur le projet **Zombies Perks**, une application web interactive construite avec **React** permettant d'afficher une liste d'atouts (perks) du mode Zombies dans **Call of Duty: Black Ops Cold War**. L'application permet aux joueurs de découvrir et explorer les atouts du jeu de manière simple, intuitive et responsive.
+Bienvenue sur le projet **Zombies Perks**, une application web interactive construite avec **React** permettant d'afficher une liste d'atouts (perks) du mode Zombies dans **Call of Duty**. L'application permet aux joueurs de découvrir et explorer les atouts du jeu de manière simple, intuitive et responsive.
 
 Chaque atout est présenté avec :
 - **Son nom**
@@ -34,7 +34,8 @@ Chaque atout est présenté avec :
 1. Clonez ce repository sur votre machine locale.
    ```bash
    git clone https://github.com/votre-utilisateur/zombies-perks.git
-   ```
+```
+
 ### Code
 
 import React from 'react';
@@ -56,7 +57,7 @@ const PerkList = () => {
 
     // rajoutez autant d'atout que vous voulez (tant qu'ils existes bien sur) //
 
-    //  et Finir par cette partie du code dans src/components/PerkList.js  //
+    // et Finir par cette partie du code dans src/components/PerkList.js //
 
         return (
     <div>
@@ -85,7 +86,7 @@ export default PerkList;
 
 ## Description
 
-Welcome to the **Zombies Perks** project, an interactive web application built with **React** that displays a list of perks from the **Zombies mode** in **Call of Duty: Black Ops Cold War**. The app allows players to discover and explore the game's perks in a simple, intuitive, and responsive way.
+Welcome to the **Zombies Perks** project, an interactive web application built with **React** that displays a list of perks from the **Zombies mode** in **Call of Duty**. The app allows players to discover and explore the game's perks in a simple, intuitive, and responsive way.
 
 Each perk is presented with:
 - **Its name**
